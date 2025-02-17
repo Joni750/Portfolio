@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --negro: #202020;
+    --blanco: #FFFFFF;
+    --morado: #B173E5;
+    --gris: #B5B5B5;
+    --negro-leve: #2B2B2B;
+    --plateado: #C0C0C0;
+}
+
+html{
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    background-color: var(--negro);
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#proyectos, #tecnologias, #experiencia, #sobre-mi {
+    padding-top: 5rem;
+}
+
+/* HEADER */
+
+header {
+    background-color: transparent;
+    padding: 15px 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--morado);
+}
+
+/* INTRO */
+
+#intro {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.intro-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro-image, .intro-text {
+    max-width: 50%;
+}
+
+#intro h2 {
+    color: var(--morado);
+    font-size: 40px;
+    font-weight: 300;
+    margin-block: 0;
+}
+
+#intro h1 {
+    font-size: 64px;
+    margin: 0;
+    font-weight: 400;
+}
+
+#intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-block: 20px;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--negro-leve);
+    color: var(--blanco);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.buttons a:hover {
+    background: #3b3b3b;
+    box-shadow: 0px 0px 15px rgba(192, 192, 192, 0.3);
+}
+
+.intro-image img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px 15px rgba(192, 192, 192, 0.15);
+}
+
+/* PROYECTOS */
+
+#proyectos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#proyectos h2 {
+    font-size: 64px;
+    color: var(--morado);
+}
+
+.proyectos-content {
+    display: flex;
+    gap: 10rem;
+}
+
+.column-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.column-content nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column-content nav h3 {
+    font-weight: 500;
+    margin: 20px 0 10px 0;
+}
+
+.column-content nav p {
+    font-weight: 300;
+    margin: 0;
+}
+
+.box-content {
+    display: flex;
+    flex-direction: column;
+    background: var(--negro-leve);
+    border-radius: 10px;
+}
+
+.box-content img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
