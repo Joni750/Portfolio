@@ -40,6 +40,4 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', onScroll);
     // Ejecutamos una vez al cargar la página
     onScroll();
-  });
-  
-  
+});
