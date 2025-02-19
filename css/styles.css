@@ -176,9 +176,9 @@ nav ul li {
 .timeline::before {
     content: "";
     position: absolute;
-    left: 10px;
+    left: 11px;
     top: 0;
-    width: 4px;
+    width: 2px;
     height: 100%;
     background-color: var(--morado);
 }
@@ -220,6 +220,7 @@ nav ul li {
 }
 
 .timeline-description {
+    font-weight: 300;
     width: 55%;
     margin-top: 0;
 }
