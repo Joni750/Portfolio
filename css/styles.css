@@ -122,6 +122,14 @@ nav ul li {
     margin-block: 20px;
 }
 
+.intro-image img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px 15px rgba(192, 192, 192, 0.15);
+}
+
 .buttons {
     margin-top: 30px;
     display: flex;
@@ -143,14 +151,6 @@ nav ul li {
 .buttons a:hover {
     background: #3b3b3b;
     box-shadow: 0px 0px 15px rgba(192, 192, 192, 0.3);
-}
-
-.intro-image img {
-    width: 350px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0px 0px 50px 15px rgba(192, 192, 192, 0.15);
 }
 
 /* EXPERIENCIA */
@@ -776,4 +776,59 @@ nav ul li {
 .screaming:hover::before {
     opacity: 1;
     transform: translateY(-55px);
+}
+
+/* SOBRE MÍ */
+
+#sobre-mi {
+    width: 100%;
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sobre-mi h2 {
+    color: var(--morado);
+    font-size: 64px;
+}
+
+.content-sobre-mi {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sobre-mi-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre-mi-image, .sobre-mi-text {
+    max-width: 50%;
+}
+
+.sobre-mi-image img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px 15px rgba(192, 192, 192, 0.15);
+}
+
+#sobre-mi p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-block: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    margin: 0rem;
+}
+
+.content-footer {
+    display: flex;
+    padding-block: 1rem;
 }
