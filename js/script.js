@@ -41,3 +41,44 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ejecutamos una vez al cargar la página
     onScroll();
 });
+
+// Animación para arriba
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(".arriba");
+
+  const revealSection = () => {
+      sections.forEach((section) => {
+          const sectionTop = section.getBoundingClientRect().top;
+          const triggerPoint = window.innerHeight * 0.75; // Ajusta el punto de activación
+
+          if (sectionTop < triggerPoint) {
+              section.classList.add("show");
+          }
+      });
+  };
+
+  window.addEventListener("scroll", revealSection);
+  revealSection(); // Para activar las secciones visibles al cargar
+});
+
+// Animación izquierda INTRO
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Selecciona todos los elementos con las clases .izquierda, .izquierda2, .izquierda3
+  const sections = document.querySelectorAll(".izquierda, .izquierda2, .izquierda3");
+
+  const revealSection = () => {
+    sections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const triggerPoint = window.innerHeight * 1; // Ajusta el punto de activación
+
+      if (sectionTop < triggerPoint) {
+        section.classList.add("show");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealSection);
+  revealSection(); // Para activar las secciones visibles al cargar
+});

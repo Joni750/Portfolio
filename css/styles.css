@@ -12,10 +12,22 @@ html{
     font-family: "Poppins", serif;
     font-weight: 400;
     scroll-behavior: smooth;
+    height: 100%;
+    background-image: radial-gradient(ellipse 100% 50% at 0% -20%, #272727, var(--negro));
+
 }
 
 h2 {
     font-weight: 400;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+p {
+    font-weight: 300;
 }
 
 body {
@@ -29,7 +41,7 @@ body {
 }
 
 .container {
-    max-width: 50%;
+    max-width: 60rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -37,6 +49,53 @@ body {
 
 #proyectos, #tecnologias, #experiencia, #sobre-mi {
     padding-top: 5rem;
+}
+
+.arriba {
+    opacity: 0;
+    transform: translateY(150px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.arriba.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.izquierda {
+    opacity: 0;
+    transform: translateX(200px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.izquierda.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.izquierda2 {
+    opacity: 0;
+    transform: translateX(200px);
+    transition-delay: 1.5s;
+    transition: opacity 0.5s, transform 0.5s;
+    transition-delay: 0.3s, 0.3s;
+}
+
+.izquierda2.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.izquierda3 {
+    opacity: 0;
+    transform: translateX(200px);
+    transition: opacity 0.5s, transform 0.5s;
+    transition-delay: .6s, .6s;
+}
+
+.izquierda3.show {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* HEADER */
@@ -127,7 +186,8 @@ nav ul li {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0px 0px 50px 15px rgba(192, 192, 192, 0.15);
+    border: 1px solid #ffffff0a;
+    box-shadow: 10px 10px 15px rgb(0 0 0 / 30%);
 }
 
 .buttons {
@@ -137,8 +197,11 @@ nav ul li {
 }
 
 .buttons a {
-    display: inline-block;
-    padding: 10px 20px;
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 8px 20px;
     background-color: var(--negro-leve);
     color: var(--blanco);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -151,6 +214,11 @@ nav ul li {
 .buttons a:hover {
     background: #3b3b3b;
     box-shadow: 0px 0px 15px rgba(192, 192, 192, 0.3);
+}
+
+.buttons svg {
+    width: 24px;
+    height: 24px;
 }
 
 /* EXPERIENCIA */
@@ -220,7 +288,6 @@ nav ul li {
 }
 
 .timeline-description {
-    font-weight: 300;
     width: 55%;
     margin-top: 0;
 }
@@ -230,6 +297,7 @@ nav ul li {
 #proyectos {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
@@ -240,14 +308,19 @@ nav ul li {
 }
 
 .proyectos-content {
+    width: 100%;
     display: flex;
-    gap: 10rem;
+    justify-content: space-between;
 }
 
 .column-content {
     display: flex;
     flex-direction: column;
     gap: 5rem;
+}
+
+.column2 {
+    margin-top: 300px;
 }
 
 .column-content nav {
@@ -266,18 +339,37 @@ nav ul li {
     margin: 0;
 }
 
+.column-item {
+    color: #fff;
+    width: 400px;
+    margin-bottom: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
 .box-content {
-    display: flex;
-    flex-direction: column;
-    background: var(--negro-leve);
     border-radius: 10px;
+    overflow: hidden;
+    transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.box-content:hover {
+    transform: scale(.95);
+    transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+    cursor: pointer;
 }
 
 .box-content img {
-    width: 400px;
-    height: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    transition: all .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.box-content img:hover {
+    transform: scale(1.15);
 }
 
 /* TECNOLOGIAS */
@@ -813,7 +905,8 @@ nav ul li {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0px 0px 50px 15px rgba(192, 192, 192, 0.15);
+    border: 1px solid #ffffff0a;
+    box-shadow: 10px 10px 15px rgb(0 0 0 / 30%);
 }
 
 #sobre-mi p {
@@ -825,10 +918,30 @@ nav ul li {
 /* FOOTER */
 
 footer {
-    margin: 0rem;
+    width: 100%;
+    max-width: 60rem;
+    margin: 60px auto 10px auto;
+    opacity: 0.8;
 }
 
 .content-footer {
+    width: 100%;
     display: flex;
-    padding-block: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 16px;
+}
+
+.menu-footer {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-footer li {
+    list-style: none;
+}
+
+.menu-footer a {
+    color: #fff;
+    text-decoration: none;
 }
