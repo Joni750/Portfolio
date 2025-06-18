@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Proyectos efecto parallax
 
+if (window.innerWidth >= 767) {
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.utils.toArray(".column-item").forEach((item, i) => {
@@ -104,6 +106,8 @@ gsap.utils.toArray(".column-item").forEach((item, i) => {
     }
   );
 });
+
+}
 
 // Animación tecnologias botando
 

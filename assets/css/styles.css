@@ -15,6 +15,10 @@ html{
     background-image: radial-gradient(ellipse 100% 50% at 0% -20%, #272727, var(--negro));
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 h2 {
     font-weight: 300;
 }
@@ -969,11 +973,11 @@ footer {
 }
 
 .content-footer {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-block: 16px;
+    padding-block: 20px;
     font-weight: 200;
 }
 
@@ -1032,8 +1036,271 @@ footer {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
-    
+    main {
+        padding-inline: 20px;
+    }
+
+    /* HEADER */
+
+    header {
+        padding: 10px 10px;
+    }
+
+    nav ul {
+        gap: 0px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    /* INTRO */
+
+    .intro-image.izquierda3.show {
+        display: none;
+    }
+
+    .intro-image, .intro-text {
+        max-width: 100%;
+    }
+
+    /* EXPERIENCIA */
+
+    #experiencia h2 {
+        font-size: 48px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .timeline-description {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* PROYECTOS */
+
+    #proyectos h2 {
+        font-size: 48px;
+    }
+
+    .column-item {
+        opacity: 1; 
+        max-width: 35vw;
+    }
+
+    .proyectos-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .column-content h3 {
+        font-size: 20px;
+    }
+
+    .column-content p {
+        font-size: 14px;
+    }
+
+    .column2 {
+        margin-top: 210px;
+    }
+
+    /* TECNOLOGÍAS */
+
+    #tecnologias {
+        gap: 40px;
+    }
+
+    #tecnologias h2 {
+        font-size: 48px;
+    }
+
+    .box {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tecnologias {
+        display: flex;
+        flex-direction: row;
+        gap: 3.9rem;
+    }
+
+    .tecnologias article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* HTML */
+
+    .html::before {
+        transform: translateY(-40px);
+    }
+
+    .html:hover::before {
+        transform: translateY(-50px);
+    }
+
+    /* CSS */
+
+    .css::before {
+        transform: translateY(-40px);
+    }
+
+    .css:hover::before {
+        transform: translateY(-50px);
+    }
+
+    /* JS */
+
+    .js::before {
+        transform: translateY(-40px);
+    }
+
+    .js:hover::before {
+        transform: translateY(-50px);
+    }
+
+    /* Bootstrap */
+
+    .bootstrap::before {
+        transform: translateY(-40px);
+    }
+
+    .bootstrap:hover::before {
+        transform: translateY(-50px);
+    }
+
+    /* PHP */
+
+    .php::before {
+        transform: translateY(-40px);
+    }
+
+    .php:hover::before {
+        transform: translateY(-50px);
+    }
+
+    /* SQL */
+
+    .sql::before {
+        transform: translateY(-40px);
+    }
+
+    .sql:hover::before {
+        transform: translateY(-50px);
+    }
+
+    /* Laravel */
+
+    .laravel::before {
+        transform: translateY(-40px);
+    }
+
+    .laravel:hover::before {
+        transform: translateY(-50px);
+    }
+
+    /* HeidiSQL */
+
+    .heidi::before {
+        transform: translateY(-40px);
+    }
+
+    .heidi:hover::before {
+        transform: translateY(-50px);
+    }
+
+    /* WordPress */
+
+    .wordpress::before {
+        transform: translateY(-40px);
+    }
+
+    .wordpress:hover::before {
+        transform: translateY(-50px);
+    }
+
+    /* Figma */
+
+    .figma::before {
+        transform: translateY(-40px);
+    }
+
+    .figma:hover::before {
+        transform: translateY(-50px);
+    }
+
+    /* GitHub */
+
+    .github::before {
+        transform: translateY(-40px);
+    }
+
+    .github:hover::before {
+        opacity: 1;
+        transform: translateY(-50px);
+    }
+
+    /* VS Code */
+
+    .code::before {
+        transform: translateY(-40px);
+    }
+
+    .code:hover::before {
+        transform: translateY(-50px);
+    }
+
+    /* Screaming Frog */
+
+    .screaming::before {
+        transform: translateY(-40px);
+    }
+
+    .screaming:hover::before {
+        transform: translateY(-50px);
+    }
+
+    /* SOBRE MÍ */
+
+    #sobre-mi h2 {
+        font-size: 48px;
+    }   
+
+    .content-sobre-mi {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sobre-mi-image, .sobre-mi-text {
+        max-width: 100%;
+    }
+
+    /* FOOTER */
+
+    .content-footer {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .menu-footer {
+        padding: 0;
+    }
 
 }
