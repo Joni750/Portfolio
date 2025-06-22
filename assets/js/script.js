@@ -18,19 +18,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función que se ejecuta en cada evento de scroll
     function onScroll() {
       const scrollPos = window.scrollY || document.documentElement.scrollTop;
-      
+
       navLinks.forEach(link => {
-        // Obtenemos la sección que coincide con el href del enlace
-        const section = document.querySelector(link.getAttribute('href'));
-        if (section) {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-  
-          // Ajusta el valor del offset (por ejemplo, 50) según tus necesidades
-          if (scrollPos >= sectionTop - 150 && scrollPos < sectionTop + sectionHeight - 150) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          const section = document.querySelector(href);
+          if (section) {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (scrollPos >= sectionTop - 150 && scrollPos < sectionTop + sectionHeight - 150) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
           }
         }
       });
