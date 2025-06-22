@@ -1059,7 +1059,7 @@ footer {
 
     /* INTRO */
 
-    .intro-image.izquierda3.show {
+    .intro-image {
         display: none;
     }
 
