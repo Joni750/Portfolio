@@ -220,7 +220,7 @@ nav ul li {
 
 .intro-image img {
     width: 350px;
-    height: 350px;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     border: 1px solid #ffffff0a;
@@ -979,7 +979,7 @@ nav ul li {
 
 .sobre-mi-image img {
     width: 350px;
-    height: 350px;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     border: 1px solid #ffffff0a;
