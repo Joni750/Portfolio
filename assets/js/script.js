@@ -65,24 +65,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Animación izquierda INTRO
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Selecciona todos los elementos con las clases .izquierda, .izquierda2, .izquierda3
-  const sections = document.querySelectorAll(".izquierda, .izquierda2, .izquierda3");
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Selecciona todos los elementos con las clases .izquierda, .izquierda2, .izquierda3
+//   const sections = document.querySelectorAll(".izquierda, .izquierda2, .izquierda3");
 
-  const revealSection = () => {
-    sections.forEach((section) => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const triggerPoint = window.innerHeight * 1; // Ajusta el punto de activación
+//   const revealSection = () => {
+//     sections.forEach((section) => {
+//       const sectionTop = section.getBoundingClientRect().top;
+//       const triggerPoint = window.innerHeight * 1; // Ajusta el punto de activación
 
-      if (sectionTop < triggerPoint) {
-        section.classList.add("show");
-      }
-    });
-  };
+//       if (sectionTop < triggerPoint) {
+//         section.classList.add("show");
+//       }
+//     });
+//   };
 
-  window.addEventListener("scroll", revealSection);
-  revealSection(); // Para activar las secciones visibles al cargar
-});
+//   window.addEventListener("scroll", revealSection);
+//   revealSection(); // Para activar las secciones visibles al cargar
+// });
 
 // Proyectos efecto parallax
 
