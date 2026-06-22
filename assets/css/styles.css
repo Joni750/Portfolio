@@ -113,7 +113,6 @@ body {
 .izquierda2 {
     opacity: 0;
     transform: translateX(200px);
-    transition-delay: 1.5s;
     transition: opacity 0.5s, transform 0.5s;
     transition-delay: 0.3s, 0.3s;
 }
@@ -389,7 +388,6 @@ nav ul li {
     margin-bottom: 100px;
     text-align: center;
     box-sizing: border-box;
-    display: inline-block;
     opacity: 0; 
     transform: translateY(50px);
 }
@@ -500,599 +498,186 @@ nav ul li {
     animation: bounce 1s ease forwards;
 }
 
-/* HTML */
+/* TECNOLOGIAS - Shared styles */
+
+.html, .css, .js, .tailwind, .react, .vite, .bootstrap,
+.php, .sql, .laravel, .heidi,
+.wordpress, .figma, .git, .github, .code, .screaming {
+    border: 1px solid transparent;
+    box-shadow: none;
+    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    background-color: var(--tech-bg);
+}
+
+.html:hover, .css:hover, .js:hover, .tailwind:hover, .react:hover, .vite:hover, .bootstrap:hover,
+.php:hover, .sql:hover, .laravel:hover, .heidi:hover,
+.wordpress:hover, .figma:hover, .git:hover, .github:hover, .code:hover, .screaming:hover {
+    background-color: var(--tech-bg-hover);
+    box-shadow: 0px 0px 15px 3px var(--tech-shadow);
+    border: 1px solid var(--tech-color);
+}
+
+.html::before, .css::before, .js::before, .tailwind::before, .react::before, .vite::before, .bootstrap::before,
+.php::before, .sql::before, .laravel::before, .heidi::before,
+.wordpress::before, .figma::before, .git::before, .github::before, .code::before, .screaming::before {
+    content: var(--tech-name);
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: var(--tech-label, var(--tech-color));
+    backdrop-filter: blur(10px);
+    transform: translateY(-45px);
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.html:hover::before, .css:hover::before, .js:hover::before, .tailwind:hover::before, .react:hover::before, .vite:hover::before, .bootstrap:hover::before,
+.php:hover::before, .sql:hover::before, .laravel:hover::before, .heidi:hover::before,
+.wordpress:hover::before, .figma:hover::before, .git:hover::before, .github:hover::before, .code:hover::before, .screaming:hover::before {
+    opacity: 1;
+    transform: translateY(-55px);
+}
+
+/* Per-technology variables */
 
 .html {
-    background-color: rgb(227, 79, 38, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #e34f26;
+    --tech-bg: rgb(227, 79, 38, 0.2);
+    --tech-bg-hover: rgb(227, 79, 38, 0.4);
+    --tech-shadow: rgb(227, 79, 38, 0.3);
+    --tech-name: 'HTML';
 }
-
-.html:hover {
-    background-color: rgb(227, 79, 38, 0.4);
-    box-shadow: 0px 0px 15px 3px rgb(227, 79, 38, 0.3);
-    border: 1px solid #e34f26;
-}
-
-.html::before {
-    content: 'HTML';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #e34f26;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.html:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* CSS */
 
 .css {
-    background-color: rgba(102, 51, 153, 0.2); 
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #663399;
+    --tech-bg: rgba(102, 51, 153, 0.2);
+    --tech-bg-hover: rgba(102, 51, 153, 0.4);
+    --tech-shadow: rgba(102, 51, 153, 0.3);
+    --tech-label: #a970ff;
+    --tech-name: 'CSS';
 }
-
-.css:hover {
-    background-color: rgba(102, 51, 153, 0.4); 
-    box-shadow: 0px 0px 15px 3px rgba(102, 51, 153, 0.3);
-    border: 1px solid #663399;
-}
-
-.css::before {
-    content: 'CSS';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #a970ff;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.css:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* JS */
 
 .js {
-    background-color: rgb(240, 219, 79, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #F0DB4F;
+    --tech-bg: rgb(240, 219, 79, 0.2);
+    --tech-bg-hover: rgb(240, 219, 79, 0.4);
+    --tech-shadow: rgb(240, 219, 79, 0.3);
+    --tech-name: 'JavaScript';
 }
-
-.js:hover {
-    background-color: rgb(240, 219, 79, 0.4);
-    box-shadow: 0px 0px 15px 3px rgb(240, 219, 79, 0.3);
-    border: 1px solid #F0DB4F;
-}
-
-.js::before {
-    content: 'JavaScript';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #F0DB4F;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.js:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* Tailwind CSS */
 
 .tailwind {
-    background-color: rgba(56, 189, 248, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #38bdf8;
+    --tech-bg: rgba(56, 189, 248, 0.2);
+    --tech-bg-hover: rgba(56, 189, 248, 0.4);
+    --tech-shadow: rgba(56, 189, 248, 0.3);
+    --tech-name: 'Tailwind';
 }
-
-.tailwind:hover {
-    background-color: rgba(56, 189, 248, 0.4);
-    box-shadow: 0px 0px 15px 3px rgba(56, 189, 248, 0.3);
-    border: 1px solid #38bdf8;
-}
-
-.tailwind::before {
-    content: 'Tailwind';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #38bdf8;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.tailwind:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* React */
 
 .react {
-    background-color: rgba(97, 218, 251, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #61DAFB;
+    --tech-bg: rgba(97, 218, 251, 0.2);
+    --tech-bg-hover: rgba(97, 218, 251, 0.4);
+    --tech-shadow: rgba(97, 218, 251, 0.3);
+    --tech-name: 'React';
 }
-
-.react:hover {
-    background-color: rgba(97, 218, 251, 0.4);
-    box-shadow: 0px 0px 15px 3px rgba(97, 218, 251, 0.3);
-    border: 1px solid #61DAFB;
-}
-
-.react::before {
-    content: 'React';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #61DAFB;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.react:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* Vite */
 
 .vite {
-    background-color: rgba(100, 108, 255, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #646cff;
+    --tech-bg: rgba(100, 108, 255, 0.2);
+    --tech-bg-hover: rgba(100, 108, 255, 0.4);
+    --tech-shadow: rgba(100, 108, 255, 0.3);
+    --tech-name: 'Vite';
 }
-
-.vite:hover {
-    background-color: rgba(100, 108, 255, 0.4);
-    box-shadow: 0px 0px 15px 3px rgba(100, 108, 255, 0.3);
-    border: 1px solid #646cff;
-}
-
-.vite::before {
-    content: 'Vite';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #646cff;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.vite:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* Bootstrap */
 
 .bootstrap {
-    background-color: rgb(126, 19, 248, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #7E13F8;
+    --tech-bg: rgb(126, 19, 248, 0.2);
+    --tech-bg-hover: rgb(126, 19, 248, 0.4);
+    --tech-shadow: rgb(126, 19, 248, 0.3);
+    --tech-name: 'Bootstrap';
 }
-
-.bootstrap:hover {
-    background-color: rgb(126, 19, 248, 0.4);
-    box-shadow: 0px 0px 15px 3px rgb(126, 19, 248, 0.3);
-    border: 1px solid #7E13F8;
-}
-
-.bootstrap::before {
-    content: 'Bootstrap';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #7E13F8;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.bootstrap:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* PHP */
 
 .php {
-    background-color: rgb(181, 181, 181, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #B5B5B5;
+    --tech-bg: rgb(181, 181, 181, 0.2);
+    --tech-bg-hover: rgb(181, 181, 181, 0.4);
+    --tech-shadow: rgb(181, 181, 181, 0.3);
+    --tech-name: 'PHP';
 }
-
-.php:hover {
-    background-color: rgb(181, 181, 181, 0.4);
-    box-shadow: 0px 0px 15px 3px rgb(181, 181, 181, 0.3);
-    border: 1px solid #B5B5B5;
-}
-
-.php::before {
-    content: 'PHP';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #B5B5B5;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.php:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* SQL */
 
 .sql {
-    background-color: rgb(0, 84, 107, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #00546B;
+    --tech-bg: rgb(0, 84, 107, 0.2);
+    --tech-bg-hover: rgb(0, 84, 107, 0.4);
+    --tech-shadow: rgb(0, 84, 107, 0.3);
+    --tech-name: 'SQL';
 }
-
-.sql:hover {
-    background-color: rgb(0, 84, 107, 0.4);
-    box-shadow: 0px 0px 15px 3px rgb(0, 84, 107, 0.3);
-    border: 1px solid #00546B;
-}
-
-.sql::before {
-    content: 'SQL';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #00546B;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.sql:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* Laravel */
 
 .laravel {
-    background-color: rgb(247, 49, 33, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #F73121;
+    --tech-bg: rgb(247, 49, 33, 0.2);
+    --tech-bg-hover: rgb(247, 49, 33, 0.4);
+    --tech-shadow: rgb(247, 49, 33, 0.3);
+    --tech-name: 'Laravel';
 }
-
-.laravel:hover {
-    background-color: rgb(247, 49, 33, 0.4);
-    box-shadow: 0px 0px 15px 3px rgb(247, 49, 33, 0.3);
-    border: 1px solid #F73121;
-}
-
-.laravel::before {
-    content: 'Laravel';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #F73121;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.laravel:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* HeidiSQL */
 
 .heidi {
-    background-color: rgb(73, 174, 4, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #49AE04;
+    --tech-bg: rgb(73, 174, 4, 0.2);
+    --tech-bg-hover: rgb(73, 174, 4, 0.4);
+    --tech-shadow: rgb(73, 174, 4, 0.3);
+    --tech-name: 'HeidiSQL';
 }
-
-.heidi:hover {
-    background-color: rgb(73, 174, 4, 0.4);
-    box-shadow: 0px 0px 15px 3px rgb(73, 174, 4, 0.3);
-    border: 1px solid #49AE04;
-}
-
-.heidi::before {
-    content: 'HeidiSQL';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #49AE04;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.heidi:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* WordPress */
 
 .wordpress {
-    background-color: rgb(33, 117, 155, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #21759B;
+    --tech-bg: rgb(33, 117, 155, 0.2);
+    --tech-bg-hover: rgb(33, 117, 155, 0.4);
+    --tech-shadow: rgb(33, 117, 155, 0.3);
+    --tech-name: 'WordPress';
 }
-
-.wordpress:hover {
-    background-color: rgb(33, 117, 155, 0.4);
-    box-shadow: 0px 0px 15px 3px rgb(33, 117, 155, 0.3);
-    border: 1px solid #21759B;
-}
-
-.wordpress::before {
-    content: 'WordPress';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #21759B;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.wordpress:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* Figma */
 
 .figma {
-    background-color: rgb(162, 89, 255, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #A259FF;
+    --tech-bg: rgb(162, 89, 255, 0.2);
+    --tech-bg-hover: rgb(162, 89, 255, 0.4);
+    --tech-shadow: rgb(162, 89, 255, 0.3);
+    --tech-name: 'Figma';
 }
-
-.figma:hover {
-    background-color: rgb(162, 89, 255, 0.4);
-    box-shadow: 0px 0px 15px 3px rgb(162, 89, 255, 0.3);
-    border: 1px solid #A259FF;
-}
-
-.figma::before {
-    content: 'Figma';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #A259FF;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.figma:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* Git */
 
 .git {
-    background-color: rgba(240, 80, 50, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #F05032;
+    --tech-bg: rgba(240, 80, 50, 0.2);
+    --tech-bg-hover: rgba(240, 80, 50, 0.4);
+    --tech-shadow: rgba(240, 80, 50, 0.3);
+    --tech-name: 'Git';
 }
-
-.git:hover {
-    background-color: rgba(240, 80, 50, 0.4);
-    box-shadow: 0px 0px 15px 3px rgba(240, 80, 50, 0.3);
-    border: 1px solid #F05032;
-}
-
-.git::before {
-    content: 'Git';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #F05032;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.git:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* GitHub */
 
 .github {
-    background-color: rgb(181, 181, 181, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #B5B5B5;
+    --tech-bg: rgb(181, 181, 181, 0.2);
+    --tech-bg-hover: rgb(181, 181, 181, 0.4);
+    --tech-shadow: rgb(181, 181, 181, 0.3);
+    --tech-name: 'GitHub';
 }
-
-.github:hover {
-    background-color: rgb(181, 181, 181, 0.4);
-    box-shadow: 0px 0px 15px 3px rgb(181, 181, 181, 0.3);
-    border: 1px solid #B5B5B5;
-}
-
-.github::before {
-    content: 'GitHub';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #B5B5B5;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.github:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* VS Code */
 
 .code {
-    background-color: rgb(35, 169, 242, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    --tech-color: #23A9F2;
+    --tech-bg: rgb(35, 169, 242, 0.2);
+    --tech-bg-hover: rgb(35, 169, 242, 0.4);
+    --tech-shadow: rgb(35, 169, 242, 0.3);
+    --tech-name: 'VS\u00A0Code';
 }
-
-.code:hover {
-    background-color: rgb(35, 169, 242, 0.4);
-    box-shadow: 0px 0px 15px 3px rgb(35, 169, 242, 0.3);
-    border: 1px solid #23A9F2;
-}
-
-.code::before {
-    content: 'VS Code';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #23A9F2;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.code:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
-}
-
-/* Screaming Frog */
 
 .screaming {
-    background-color: rgb(113, 168, 52, 0.2);
-    border: 1px solid transparent;
-    box-shadow: none;
-    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
-}
-
-.screaming:hover {
-    background-color: rgb(113, 168, 52, 0.4);
-    box-shadow: 0px 0px 15px 3px rgb(113, 168, 52, 0.3);
-    border: 1px solid #71A834;
-}
-
-.screaming::before {
-    content: 'Screaming Frog';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    padding: 5px 15px;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #71A834;
-    backdrop-filter: blur(10px);
-    transform: translateY(-45px);
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.screaming:hover::before {
-    opacity: 1;
-    transform: translateY(-55px);
+    --tech-color: #71A834;
+    --tech-bg: rgb(113, 168, 52, 0.2);
+    --tech-bg-hover: rgb(113, 168, 52, 0.4);
+    --tech-shadow: rgb(113, 168, 52, 0.3);
+    --tech-name: 'Screaming\u00A0Frog';
 }
 
 /* SOBRE MÍ */
@@ -1325,175 +910,18 @@ footer {
         flex-direction: column;
     }
 
-    /* HTML */
+    /* TECNOLOGIAS */
 
-    .html::before {
+    .html::before, .css::before, .js::before, .tailwind::before, .react::before, .vite::before, .bootstrap::before,
+    .php::before, .sql::before, .laravel::before, .heidi::before,
+    .wordpress::before, .figma::before, .git::before, .github::before, .code::before, .screaming::before {
         transform: translateY(-40px);
     }
 
-    .html:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* CSS */
-
-    .css::before {
-        transform: translateY(-40px);
-    }
-
-    .css:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* JS */
-
-    .js::before {
-        transform: translateY(-40px);
-    }
-
-    .js:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* Tailwind CSS */
-
-    .tailwind::before {
-        transform: translateY(-40px);
-    }
-
-    .tailwind:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* React */
-
-    .react::before {
-        transform: translateY(-40px);
-    }
-
-    .react:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* Vite */
-
-    .vite::before {
-        transform: translateY(-40px);
-    }
-
-    .vite:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* Bootstrap */
-
-    .bootstrap::before {
-        transform: translateY(-40px);
-    }
-
-    .bootstrap:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* PHP */
-
-    .php::before {
-        transform: translateY(-40px);
-    }
-
-    .php:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* SQL */
-
-    .sql::before {
-        transform: translateY(-40px);
-    }
-
-    .sql:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* Laravel */
-
-    .laravel::before {
-        transform: translateY(-40px);
-    }
-
-    .laravel:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* HeidiSQL */
-
-    .heidi::before {
-        transform: translateY(-40px);
-    }
-
-    .heidi:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* WordPress */
-
-    .wordpress::before {
-        transform: translateY(-40px);
-    }
-
-    .wordpress:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* Figma */
-
-    .figma::before {
-        transform: translateY(-40px);
-    }
-
-    .figma:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* Git */
-
-    .git::before {
-        transform: translateY(-40px);
-    }
-
-    .git:hover::before {
+    .html:hover::before, .css:hover::before, .js:hover::before, .tailwind:hover::before, .react:hover::before, .vite:hover::before, .bootstrap:hover::before,
+    .php:hover::before, .sql:hover::before, .laravel:hover::before, .heidi:hover::before,
+    .wordpress:hover::before, .figma:hover::before, .git:hover::before, .github:hover::before, .code:hover::before, .screaming:hover::before {
         opacity: 1;
-        transform: translateY(-50px);
-    }
-
-    /* GitHub */
-
-    .github::before {
-        transform: translateY(-40px);
-    }
-
-    .github:hover::before {
-        opacity: 1;
-        transform: translateY(-50px);
-    }
-
-    /* VS Code */
-
-    .code::before {
-        transform: translateY(-40px);
-    }
-
-    .code:hover::before {
-        transform: translateY(-50px);
-    }
-
-    /* Screaming Frog */
-
-    .screaming::before {
-        transform: translateY(-40px);
-    }
-
-    .screaming:hover::before {
         transform: translateY(-50px);
     }
 
